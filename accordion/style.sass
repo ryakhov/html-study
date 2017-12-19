@@ -1,0 +1,96 @@
+body
+  margin: 0
+  padding: 0
+
+.ac-container
+  width: 90%
+  margin: 10px auto
+
+.ac-container label
+  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif
+  padding: 10px 0 10px 12px
+  position: relative
+  z-index: 20
+  display: block
+  height: 32px
+  cursor: pointer
+  color: #7D6655
+  text-shadow: 0 0 1px #AB9585
+  line-height: 30px
+  font-size: 16px
+  background: #ffffff
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFBF0', endColorstr='#F2EEE1',GradientType=0 );*/
+/*box-shadow:*/
+        /*0 0 0 1px rgba(155,155,155,0.3),*/
+        /*1px 0 0 0 rgba(255,255,255,0.9) inset,*/
+        /*0 2px 2px rgba(0,0,0,0.1);*/
+
+/*цвет заголовков при наведении*/
+.ac-container label:hover
+  background: white
+
+
+/* фон и текст заголовка при открытии*/
+.ac-container input:checked + label, .ac-container input:checked + label:hover
+  background: white
+  color: #222222
+  text-shadow: 0 1px 1px #C4B2A5
+  box-shadow: 0 0 0 1px rgba(155,155,155,0.3), 0 2px 2px rgba(0,0,0,0.1)
+
+/*Стрелочка вниз и в верх*/
+
+/*.ac-container label:hover:after,*/
+/*.ac-container input:checked + label:hover:after{*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+    /*right: 12px;*/
+    /*top: 18px;*/
+    /*background: transparent url(http://cdn1.iconfinder.com/data/icons/fatcow/32x32_0140/bullet_arrow_down.png) no-repeat center center;*/
+/*}*/
+/*.ac-container input:checked + label:hover:after{*/
+    /*background-image: url(http://cdn1.iconfinder.com/data/icons/fatcow/32x32_0140/bullet_arrow_up.png);*/
+/*}*/
+
+/*Убираем видимость чекбокса*/
+.ac-container input
+  display: none
+
+.ac-container article
+  background: white
+  overflow: hidden
+  height: 0
+  position: relative
+  z-index: 10
+  -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+  -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+  -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+  transition: height 0.3s ease-in-out, box-shadow 0.6s linear
+
+.ac-container input:checked ~ article
+  -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear
+  -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear
+  -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear
+  transition: height 0.5s ease-in-out, box-shadow 0.1s linear
+  box-shadow: 0 0 0 1px rgba(155,155,155,0.3)
+
+.ac-container article p
+  font-style: italic
+  color: #8C7F74
+  line-height: 22px
+  font-size: 14px
+  padding: 15px 20px
+  text-shadow: 1px 1px 1px #FAF4F0
+
+.ac-container input:checked ~ article.ac-No2
+  height: 400px
+
+.ac-container input:checked ~ article.ac-No1
+  height: 400px
+
+#ac-1
+  display: none
+
+#ac-2
+  display: none
